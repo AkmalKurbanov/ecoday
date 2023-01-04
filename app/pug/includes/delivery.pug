@@ -1,0 +1,15 @@
+.patr
+  .container 
+    h2.title=foodDeliveryTitle
+    a(href="#").more Смотреть все
+    .horizontal-scroll
+      each item in foodDelivery 
+        a(href="#").block.block--image-mini 
+          .block__img 
+            img(src="images/dist/"+item.img, alt=item.name width="148" height="65")
+            .block__logo 
+              svg
+                use(xlink:href='sprite.svg#'+item.logo) 
+          .block__info 
+            span=item.info 
+            =item.name 

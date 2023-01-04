@@ -1,0 +1,28 @@
+script.
+  var kcalslider = document.querySelector('.kcal-js input');
+  var kcalpointer = document.querySelector('.kcal-js span');
+  kcalpointer.innerHTML = kcalslider.value;
+  function setBagePosition(curentkcalslider, curentkcalpointer) {
+  const radius = curentkcalslider.scrollHeight;
+  const dxPixels = radius / 2 + (curentkcalslider.valueAsNumber - parseInt(curentkcalslider.min)) * (curentkcalslider.scrollWidth - radius) / (parseInt(curentkcalslider.max) - parseInt(curentkcalslider.min));
+  curentkcalpointer.style.left = dxPixels - (curentkcalpointer.offsetWidth / 2) + 'px';
+  }
+  setBagePosition(kcalslider, kcalpointer);
+  kcalslider.oninput = function () {
+  kcalpointer.innerHTML = kcalslider.value;
+  setBagePosition(kcalslider, kcalpointer);
+  }
+
+  var priceslider = document.querySelector('.price-js input');
+  var pricepointer = document.querySelector('.price-js span');
+  pricepointer.innerHTML = priceslider.value;
+  function setBagePosition(curentpriceslider, curentpricepointer) {
+  const radius = curentpriceslider.scrollHeight;
+  const dxPixels = radius / 2 + (curentpriceslider.valueAsNumber - parseInt(curentpriceslider.min)) * (curentpriceslider.scrollWidth - radius) / (parseInt(curentpriceslider.max) - parseInt(curentpriceslider.min));
+  curentpricepointer.style.left = dxPixels - (curentpricepointer.offsetWidth / 2) + 'px';
+  }
+  setBagePosition(priceslider, pricepointer);
+  priceslider.oninput = function () {
+  pricepointer.innerHTML = priceslider.value;
+  setBagePosition(priceslider, pricepointer);
+  }

@@ -1,0 +1,44 @@
+extends layouts/main
+block title
+  | Доставка Питания Детали
+block main
+  .detail 
+    .container 
+      .detail__banner(style=`background-image: url('images/dist/${deliveryDetailBanner}')`)
+        .detail__banner-title=deliveryDetailTitle
+      .filter
+        .filter__wrap.horizontal-scroll
+          each day, index in week
+            a(href="#" class= (index === 0 ? "active" : undefined)).filter__tab=day
+
+  .daily-programm 
+    .container 
+      .daily-programm__wrap
+
+        each item in daily
+          a(href="#").daily-programm__item
+            .daily-programm__top
+              .daily-programm__item-img
+                img(src="images/dist/"+item.img, alt=item.name width="135" height="115")
+              .daily-programm__item-info
+                .daily-programm__item-name=item.name
+                .daily-programm__item-desc=item.desc
+              
+            .daily-programm__bottom
+
+              each val, index in ['315', '32', '7','21'] 
+                .block__info-item
+                  .block__info-icon
+                    if index === 0    
+                      | к
+                    else if index === 1
+                      | б  
+                    else if index === 2
+                      | ж
+                    else if index === 3
+                      | у
+                  =val
+
+      .daily-programm__btn 
+        a(href="#").btn.btn--accent В корзину 
+        a(href="#").btn.btn--transparent Позвонить

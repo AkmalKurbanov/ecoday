@@ -1,0 +1,36 @@
+extends layouts/main
+block title
+  | Доставка питания
+block main
+  .hero 
+    .container
+      .hero__wrap
+        include includes/mixins
+        +heroDelivery
+  .container
+    .block-wrap
+      each item in foodDelivery
+        .block.block--image-large 
+          .block__img 
+            img(src="images/dist/"+item.img, alt=item.name width="340" height="90")
+            .block__logo 
+              svg
+                use(xlink:href='sprite.svg#'+item.logo) 
+          .block__info 
+            =item.name 
+            span=item.info 
+          .block__info-counts 
+            .block__info-item
+              .block__info-icon
+                svg
+                  use(xlink:href='sprite.svg#cost')
+              | от 500 c
+            .block__info-item 
+              .block__info-icon
+                svg
+                  use(xlink:href='sprite.svg#'+item.eatcounticon)
+              span=item.eatcount 
+              | разовое
+          .block__btn.block__btn--modify 
+            a(href="#").btn.btn--transparent Программы  
+            a(href="#").btn Позвонить      

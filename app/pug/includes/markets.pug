@@ -1,0 +1,15 @@
+.patr
+  .container 
+    h2.title=ecoMarketsTitle
+    a(href="#").more Смотреть все
+    .horizontal-scroll
+      each ecoMarket in ecoMarkets 
+        a(href="#").block.block--image-mini 
+          .block__img 
+            img(src="images/dist/"+ecoMarket.img, alt=ecoMarket.name width="148" height="65")
+            .block__logo 
+              svg
+                use(xlink:href='sprite.svg#'+ecoMarket.logo) 
+          .block__info 
+            span=ecoMarket.info 
+            =ecoMarket.name

@@ -1,0 +1,63 @@
+extends layouts/main
+block title
+  | Эко Маркеты Детали
+block main
+  .detail 
+    .container 
+      .detail__banner(style=`background-image: url('images/dist/${shopsDetailBanner}')`)
+        .detail__banner-title=shopsDetailTitle
+    include includes/recommendations  
+    .container 
+      .filter
+        .filter__wrap
+          each nutritionProgramm, index in nutrionTabs
+            a(href="#" class= (index === 0 ? "active" : undefined)).filter__tab=nutritionProgramm
+      .detail__info
+        .detail__info-col
+          .detail__info-name=shopsDetailName
+          .detail__info-img 
+            img(src="images/dist/"+shopsDetailImg, alt="" width="400" height="400")
+        .detail__info-col
+          .detail__info-rating
+            mixin rating 
+              .detail__info-star
+                svg
+                  use(xlink:href='sprite.svg#star')
+            +rating    
+            +rating    
+            +rating    
+            +rating    
+            +rating
+          .detail__info-name=shopsDetailName
+          .detail__info-desc=shopsDetailDesc
+          ul 
+            li.attention.clock
+              .icon 
+                svg
+                  use(xlink:href='sprite.svg#clock')
+              | Закрыто до затвра     
+              span · 
+              | 10:00 - 19:00 
+            each item, index in shopsDetailInfo
+              if index === 0
+                li
+                  .icon 
+                    svg
+                      use(xlink:href='sprite.svg#'+item.icon)
+                  a(href=`tel:${item.item}`)=item.item
+
+              else if index === 1
+                li
+                  .icon 
+                    svg
+                      use(xlink:href='sprite.svg#'+item.icon)
+                  a(href=`mailto:${item.item}`)=item.item
+              else     
+                li
+                  .icon 
+                    svg
+                      use(xlink:href='sprite.svg#'+item.icon)
+                  =item.item    
+          .detail__btn
+            .btn Меню 
+            .btn.btn--transparent В корзину   

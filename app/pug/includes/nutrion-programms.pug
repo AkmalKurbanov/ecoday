@@ -1,0 +1,14 @@
+.patr
+  .container 
+    h2.title=nutritionProgramsTitle
+    a(href="#").more Смотреть все
+    .horizontal-scroll
+      each nutritionProgramm in nutritionProgramms 
+        a(href="#").block 
+          .block__icon 
+            svg
+              use(xlink:href='sprite.svg#'+nutritionProgramm.icon)
+          .block__info=nutritionProgramm.title 
+            |  (
+            =nutritionProgramm.amount  
+            | )

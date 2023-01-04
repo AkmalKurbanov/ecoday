@@ -1,0 +1,143 @@
+.mobile-nav
+  position: fixed
+  width: 100%
+  height: 100%
+  text-align: center
+  z-index: 1
+  top: 0
+  right: 0 
+  bottom: 0 
+  left: 0
+  opacity: 0
+  transition: $transition
+  pointer-events: none
+
+  &:after
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background-color: rgba($black, .37)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  &.open
+    top: 0
+    opacity: 1
+    z-index: 2
+    pointer-events: inherit
+
+    .mobile-nav__wrap
+      top: 0
+
+
+  &__wrap
+    padding: rem(40) rem(15)
+    background-color: $white
+    position: relative
+    z-index: 1
+    top: -100%
+    transition: $transition
+
+  &__logo
+    width: rem(124)
+    height: rem(30)
+    margin: auto
+    margin-bottom: rem(20)
+    a
+      @include aic-jcc
+      display: inline-flex
+      margin-bottom: rem(25)
+      height: 100%
+
+  ul
+    padding: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    li
+      margin-bottom: rem(15)
+      list-style: none
+      cursor: pointer
+      display: inline-block
+
+      &:hover
+        a
+          color: $accentcolor
+
+        svg
+          stroke: $accentcolor
+
+      svg
+        stroke: $black
+        width: rem(13)
+        height: rem(13)
+        margin-left: rem(5)
+        transition: $transition
+
+      &.active
+        a
+          color: $accentcolor
+
+        svg
+          stroke: $accentcolor
+
+        ul
+          
+          li
+
+            &:hover
+              a
+                color: $accentcolor!important
+            a
+              color: rgba($textcolor, .7)
+              font-size: rem(14)
+
+
+      &.open
+        a
+          color: $accentcolor
+
+        svg
+          stroke: $accentcolor
+          transform: rotate(180deg)
+
+        ul
+          // display: block
+          li
+
+            &:hover
+              a
+                color: $accentcolor!important
+            a
+              color: rgba($textcolor, .7)
+              font-size: rem(14)
+
+      a
+        color: $textcolor
+        transition: $transition
+        
+
+      ul
+        display: none
+
+        li
+          display: block
+          margin-bottom: rem(10)
+
+          a
+            color: rgba($textcolor, .7)
+            font-size: rem(14)
+
+  .close
+    width: rem(25)
+    height: rem(25)
+    @include aic-jcc
+    position: absolute
+    top: rem(15)
+    right: rem(25)
+    cursor: pointer

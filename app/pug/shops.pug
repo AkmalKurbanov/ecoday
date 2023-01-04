@@ -1,0 +1,44 @@
+extends layouts/main
+block title
+  | Эко Маркеты
+block main
+  .hero 
+    .container
+      .hero__wrap
+        include includes/mixins
+        +heroShops
+  include includes/recommendations
+  include includes/filter
+  .container
+    .block-wrap
+      each item in foodDelivery
+        .block.block--image-large 
+          .block__img 
+            img(src="images/dist/"+item.img, alt=item.name width="340" height="90")
+            .block__logo 
+              svg
+                use(xlink:href='sprite.svg#'+item.logo) 
+          .block__info 
+            =item.name 
+            span=item.programm 
+          .block__info-counts 
+            .block__info-item
+              .block__info-icon
+                svg(style="stroke: #62a111")
+                  use(xlink:href='sprite.svg#clock') 
+              | 10:00 - 19:00
+            .block__info-item 
+              .block__info-icon
+                svg
+                  use(xlink:href='sprite.svg#phone')
+              | 0555 775 025
+            .block__info-item 
+              .block__info-icon
+                svg
+                  use(xlink:href='sprite.svg#marker')
+              | ул. Ахунбаева 145
+          .block__btn.block__btn--modify 
+            a(href="#").btn.btn--transparent Подробнее  
+            a(href="#").btn Позвонить
+
+  include includes/range-script

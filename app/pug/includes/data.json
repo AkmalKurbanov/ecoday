@@ -1,6 +1,8 @@
 {
   "_comment1": "Программы питания начало",
-  "nutritionPrograms": [
+
+  "nutritionProgramsTitle": "Программы питания",
+  "nutritionProgramms": [
     {
       "icon": "detocs",
       "title": "Детокс",
@@ -37,5 +39,399 @@
       "amount": "5"
     }
   ],
-  "comment1_": "Программы питания конец"
+
+  "comment1_": "Программы питания конец",
+
+  "_comment2": "Доставка питания начало",
+  "foodDeliveryTitle": "Доставка питания",
+  "foodDelivery": [
+    {
+      "img": "delivery1.webp",
+      "logo": "sixbox",
+      "info": "8 программ",
+      "name": "Six Box",
+      "programm": "Детокс",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    },
+    {
+      "img": "delivery2.webp",
+      "logo": "eatfit",
+      "info": "8 программ",
+      "name": "Eat Fit& Healthy",
+      "programm": "Набор массы",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    },
+    {
+      "img": "delivery3.webp",
+      "logo": "fp",
+      "info": "8 программ",
+      "name": "Food Project",
+      "programm": "Комфорт",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    },
+    {
+      "img": "delivery4.webp",
+      "logo": "growfood",
+      "info": "8 программ",
+      "name": "Grow Food",
+      "programm": "Поддержка веса",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    },
+    {
+      "img": "delivery5.webp",
+      "logo": "malina",
+      "info": "8 программ",
+      "name": "Malina Eco Food",
+      "programm": "Диабетическое",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    },
+    {
+      "img": "delivery6.webp",
+      "logo": "healthyfood",
+      "info": "8 программ",
+      "name": "Healthy Food",
+      "programm": "Детокс",
+      "kcal": "1200",
+      "eatcount": "3",
+      "kcalicon": "kcal",
+      "eatcounticon": "eatcount"
+    }
+  ],
+  "comment2_": "Доставка питания конец",
+
+  "_comment3": "Программы питания начало",
+  "ecoMarketsTitle": "Эко маркеты",
+  "ecoMarkets": [
+    {
+      "img": "market1.webp",
+      "logo": "ecoland",
+      "info": "Продукты питания",
+      "name": "Ecoland"
+    },
+    {
+      "img": "market2.webp",
+      "logo": "ecolife",
+      "info": "Продукты питания",
+      "name": "Eco Life"
+    },
+    {
+      "img": "market3.webp",
+      "logo": "beeko",
+      "info": "Красота, здоровье",
+      "name": "BeEco.kg"
+    },
+    {
+      "img": "market4.webp",
+      "logo": "ecos",
+      "info": "Продукты питания",
+      "name": "ECOS"
+    }
+  ],
+  "comment3_": "Программы питания конец",
+
+  "_comment4": "Логотипы начало",
+
+  "logoHeader": "logo-header.svg",
+  "logoFooter": "logo-footer.svg",
+  "comment4_": "Логотипы конец",
+
+  "_comment5": "Главнвй экран страницы начало",
+  "heroTitleHome": "EcoDay - живи здорово!",
+  "heroSubTitleHome": "Здесь небольшой текст",
+  "heroButtonTitleHome": "Наши поставщики",
+  "heroButtonLinkHome": "#",
+  "heroImgHome": "hero1.webp",
+
+  "heroTitleNutritionPrograms": "Готовые программы питания для всех",
+  "heroSubTitleNutritionPrograms": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+  "heroButtonTitleNutritionPrograms": "#",
+  "heroButtonLinkNutritionPrograms": "#",
+  "heroImgNutritionPrograms": "hero2.webp",
+
+  "heroTitleDelivery": "Доставка правильного питания от наших поставщиков",
+  "heroSubTitleDelivery": "#",
+  "heroButtonTitleDelivery": "#",
+  "heroButtonLinkDelivery": "#",
+  "heroImgDelivery": "hero3.webp",
+
+  "heroTitleShops": "Магазины эко  продуктов",
+  "heroSubTitleShops": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+  "heroButtonTitleShops": "#",
+  "heroButtonLinkShops": "#",
+  "heroImgShops": "hero4.webp",
+  "comment5_": "Главнвй экран страницы конец",
+
+  "_comment6": "Навигация начало",
+
+  "nav": [
+    {
+      "active": "active",
+      "item": "Главная",
+      "link": "#"
+    },
+    {
+      "item": "Программы питания",
+      "link": "#",
+      "subMenu": [
+        { "item": "Детокс" },
+        { "item": "Набор массы" },
+        { "item": "Поддержка веса" },
+        { "item": "Комфорт" },
+        { "item": "Фитнес" },
+        { "item": "Диабетическое" },
+        { "item": "Спорт " }
+      ]
+    },
+    {
+      "item": "Доставка еды",
+      "link": "#"
+    },
+    {
+      "item": "Эко маркеты",
+      "link": "#"
+    },
+    {
+      "item": "Контакты",
+      "link": "#"
+    }
+  ],
+  "comment6_": "Навигация конец",
+
+  "comment7_": "footer меню Доставка еды начало",
+  "footerMenuDEliveryTitle": "Доставка еды",
+  "footerMenuDElivery": [
+    {
+      "link": "#",
+      "item": "Six Box"
+    },
+    {
+      "link": "#",
+      "item": "Eat Fit Healthy"
+    },
+    {
+      "link": "#",
+      "item": "Food Project"
+    },
+    {
+      "link": "#",
+      "item": "Malina Eco Food"
+    },
+    {
+      "link": "#",
+      "item": "Grow Food"
+    },
+    {
+      "link": "#",
+      "item": "Healthy Food"
+    }
+  ],
+
+  "_comment7": "footer меню Доставка еды конец",
+
+  "comment8_": "footer меню Эко продукты начало",
+
+  "footerMenuEcoProductsTitle": "Эко продукты",
+  "footerMenuEcoProducts": [
+    {
+      "link": "#",
+      "item": "Ecoferma Market"
+    },
+    {
+      "link": "#",
+      "item": "Green Market"
+    },
+    {
+      "link": "#",
+      "item": "Eco Life"
+    },
+    {
+      "link": "#",
+      "item": "Green Valley"
+    },
+    {
+      "link": "#",
+      "item": "Ынтымык Market"
+    },
+    {
+      "link": "#",
+      "item": "Green Market"
+    }
+  ],
+  "_comment8": "footer меню Эко продукты конец",
+
+  "_comment9": "footer меню Специалисты начало",
+  "footerMenuSpecialistsTitle": "Специалисты",
+
+  "footerMenuSpecialists": [
+    {
+      "link": "#",
+      "item": "Диетологи"
+    },
+    {
+      "link": "#",
+      "item": "Нутрицологи"
+    }
+  ],
+  "comment9_": "footer меню Специалисты конец",
+
+  "_comment10": "footer Контакты начало",
+
+  "contactsTitle": "Контакты",
+
+  "contacts": [
+    {
+      "link": "#",
+      "item": "ecoday@info.com"
+    }
+  ],
+
+  "comment10_": "footer Контакты конец",
+
+  "_comment11": "Социальные сети начало",
+  "social": [
+    { "link": "#", "icon": "facebook" },
+    { "link": "#", "icon": "twitter" },
+    { "link": "#", "icon": "instagram" },
+    { "link": "#", "icon": "whatsapp" }
+  ],
+  "comment11_": "Социальные сети конец",
+
+  "_comment12": "Социальные сети начало",
+  "subscribeTitle": "Хотите присоединится к нашей команде?",
+  "comment12_": "Социальные сети конец",
+
+  "_comment13": "Рекомендованные начало",
+  "recommendations": [
+    {
+      "img": "recommendation1.webp",
+      "name": "Зеленая гречка",
+      "price": "885"
+    },
+    {
+      "img": "recommendation2.webp",
+      "name": "Зеленый чай Матча",
+      "price": "885"
+    },
+    {
+      "img": "recommendation3.webp",
+      "name": "Кокосовое масло",
+      "price": "885"
+    },
+    {
+      "img": "recommendation4.webp",
+      "name": "Сыворотка SQUILINE",
+      "price": "885"
+    },
+    {
+      "img": "recommendation5.webp",
+      "name": "Дезодорант Кристал",
+      "price": "885"
+    }
+  ],
+  "comment13_": "Рекомендованные конец",
+
+  "_comment14": "Программы питания - Детали начало",
+  "nutrionDEtailTitle": "Детокс",
+  "nutrionDEtailDesc": "Детокс — это особый вид диеты, которая разгружает пищеварительную систему, выводит вредные вещества и помогает сбросить немного лишнего веса. Когда, как не после Нового года, помочь организму справиться с последствиями праздников, а заодно и попробовать для себя что-то новое. Мы составили для вас меню на неделю. Его можно взять за основу и добавлять или заменять продукты. ",
+
+  "nutrionTabs": [
+    "Six Box",
+    "Eat Fit& Healthy",
+    "Food Project",
+    "Grow Food",
+    "Malina Eco Food",
+    "Healthy Food"
+  ],
+
+  "week": [
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+    "Воскресенье"
+  ],
+
+  "nutrionDetailImg": "nutrion-detail.webp",
+  "nutriionDetailName": "Six Box",
+  "nutriionDetailDesc": "Блюда готовятся в пароконвектоматных печах итальянского производителя Unox, а так же по технологии су-вид, что позволяет сохранить не только вкус, но и полезность всех продуктов.",
+
+  "comment14_": "Программы питания - Детали конец",
+
+  "_comment15": "Доставка Питания Детали начало",
+
+  "deliveryDetailBanner": "delivery-banner.webp",
+  "deliveryDetailTitle": "Six Box",
+  "deliveryDetailImg": "delivery-detail.webp",
+  "deliveryDetailName": "Balance",
+  "deliveryDetailDesc": "Программа Баланс Лайт предназначена для тех, кто заботится о своем ежедневном рационе без активных физических нагрузок",
+
+  "comment15_": "Доставка Питания Детали конец",
+
+  "_comment16": "Эко Маркеты Детали начало",
+
+  "shopsDetailBanner": "shops-banner.webp",
+  "shopsDetailTitle": "Ecoland",
+  "shopsDetailImg": "shops-detail.webp",
+  "shopsDetailName": "Ecoland",
+  "shopsDetailDesc": "Ecoland – это экомаркет здорового питания, радующий людей продуктами, которые помогают поддерживать здоровье, уже более 4 лет.",
+
+  "shopsDetailInfo": [
+    {
+      "icon": "phone",
+      "item": "0555 775 025"
+    },
+    {
+      "icon": "email",
+      "item": "ecomadekg@gmail.com"
+    },
+    {
+      "icon": "box",
+      "item": ["Покупки в магазине", "·Самовывоз из магазина", "·Доставка"]
+    },
+    {
+      "icon": "marker",
+      "item": "ул. Ахунбаева 145"
+    }
+  ],
+
+  "comment16_": "Эко Маркеты Детали конец",
+
+  "_comment17": "Дневные прогрраммы питаия начало",
+  "daily": [
+    {
+      "img": "daily1.webp",
+      "name": "Омлет",
+      "desc": "Яичница из взболтанных с мукой и молоком яиц."
+    },
+    {
+      "img": "daily2.webp",
+      "name": "Горячие мясные блюда",
+      "desc": "Говядина с курицей на пару"
+    },
+    {
+      "img": "daily3.webp",
+      "name": "Филе индейки в сливочно-грибном соусе",
+      "desc": ""
+    }
+  ],
+  "comment17_": "Дневные прогрраммы питаия конец"
+
+ 
 }

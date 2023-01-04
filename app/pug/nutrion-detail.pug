@@ -1,0 +1,67 @@
+extends layouts/main
+block title
+  | Программы питания - Детали
+block main
+  .detail.detail--without-banner 
+    .container 
+      h2.accent-title=nutrionDEtailTitle
+      p=nutrionDEtailDesc
+      .filter
+        .filter__wrap.horizontal-scroll
+          each nutritionProgramm, index in nutrionTabs
+            a(href="#" class= (index === 0 ? "active" : undefined)).filter__tab=nutritionProgramm
+      .detail__info
+        .detail__info-col
+          .detail__info-name=nutriionDetailName
+          .detail__info-img 
+            img(src="images/dist/"+nutrionDetailImg, alt="" width="400" height="400")
+        .detail__info-col
+          .detail__info-name=nutriionDetailName
+          .detail__info-desc=nutriionDetailDesc
+          .detail__value
+            .detail__value-col
+              .block__info-item
+                .block__info-icon
+                  svg
+                    use(xlink:href='sprite.svg#kcal')
+                span 1200
+                | ккал
+              .block__info-item
+                .block__info-icon
+                  svg
+                    use(xlink:href='sprite.svg#eatcount')
+                span 3
+                | разовое
+            .detail__value-col
+              each val, index in ['315', '32', '7','21'] 
+                .block__info-item
+                  .block__info-icon
+                    if index === 0    
+                      | к
+                    else if index === 1
+                      | б  
+                    else if index === 2
+                      | ж
+                    else if index === 3
+                      | у
+                  =val
+          .detail__price 
+            .detail__price-item
+              span 
+                b 930 c 
+                | / день
+            .detail__price-item
+              .detail__price-day цена за один день 818 сом
+              span 
+                .detail__price-percent -10%
+                b 5000 c 
+                | / 6 дней
+            .detail__price-item
+              .detail__price-day цена за один день 818 сом
+              span 
+                .detail__price-percent -12%
+                b 19600 c 
+                | / месяц           
+          .detail__btn
+            .btn Меню 
+            .btn.btn--transparent В корзину 

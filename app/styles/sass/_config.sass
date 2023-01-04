@@ -1,11 +1,17 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$accentcolor: #62A111 // Accent Color
+$secondarycolor: #8f8f8f // Tertiary Color
+$tertiary: #FFC806 // Tertiary Color
 $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$userfont: 'Montserrat', sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$white:#fff
+$black:#000
+
+$transition: all .3s
 
 // Bootstrap compatible gutter variable => $gutter
 // $grid-gutter-width: 30px
@@ -17,6 +23,8 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @import 'blocks/mixins/_rem'
 @import 'blocks/mixins/_media'
 @import 'node_modules/normalize.css/normalize'
+@import 'node_modules/swiper/swiper'
+@import 'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar'
 // @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 // @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
@@ -38,13 +46,15 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 // GENERAL CSS SETTINGS
 
-
+@mixin hoverShadow
+	box-shadow: 0px 4px 6px rgba($black, .2)
+	transform: translateY(-5px)
 
 ::placeholder
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $accentcolor
 	color: #fff
 
 input, textarea
@@ -59,10 +69,9 @@ body
 	font-size: $fontsize
 	line-height: $lineheight
 	color: $textcolor
-	min-width: rem(320)
+	// min-width: rem(320)
 	position: relative
 	overflow-x: hidden
-	background: #000
 
 
 svg

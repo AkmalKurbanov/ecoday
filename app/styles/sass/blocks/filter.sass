@@ -1,0 +1,185 @@
+.filter
+  margin: rem(25) 0
+  
+  &__tab
+    border: rem(1) solid $accentcolor
+    border-radius: rem(5)
+    padding: rem(5) rem(20)
+    transition: $transition
+    margin-right: rem(10)
+    display: inline-flex
+    justify-content: center
+    
+    color: $textcolor
+    user-select: none
+
+    &:last-child
+      margin-right: 0
+
+    &:hover,
+    &.active
+      background-color: $accentcolor
+      color: $white
+    
+    &.active
+      pointer-events: none
+
+  &__sorting
+    margin: rem(20) 0
+
+    &.active
+
+      .filter__sort-btn
+        svg
+          fill: $accentcolor
+
+      .filter__range-wrap
+        opacity: 1
+        pointer-events: inherit
+        position: relative
+
+  &__sort-btn
+    width: rem(32)
+    height: rem(32)
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1)
+    border-radius: rem(2)
+    cursor: pointer
+
+    svg
+      transition: $transition
+      fill: $secondarycolor
+
+    &:hover
+      svg
+        fill: $accentcolor
+
+  &__range-wrap
+    @include aic
+    margin: rem(5) 0 rem(50)
+    padding-top: rem(15)
+    pointer-events: none
+    opacity: 0
+    transition: $transition
+    position: absolute
+    background-color: $white
+    width: 100%
+    z-index: 1
+    left: 0
+    
+    @include xs
+      flex-direction: column
+
+  &__range
+    position: relative
+
+    &:before,
+    &:after
+      position: absolute
+      content: ''
+      width: rem(10)
+      height: rem(10)
+      border-radius: 100%
+      background-color: $accentcolor
+      top: rem(11)
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+    input[type="range"]
+      width: 100%
+      height: rem(3)
+      -webkit-appearance: none
+      appearance: none
+      background-color: rgba($accentcolor,.5)
+      border-radius: rem(3)
+      outline: none
+      margin: 0
+
+    input[type="range"]::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      height: 15px
+      width: 15px
+      background-color: $accentcolor
+      border-radius: 50%
+      cursor: pointer
+
+    span
+      position: absolute
+
+  .range
+    max-width: rem(305)
+    width: 100%
+    margin-right: rem(55)
+    
+    @include xs
+      margin-right: 0
+      max-width: 100%
+      margin-bottom: rem(40)
+
+
+    &:last-child
+      margin-right: 0
+
+    &__wrap
+      position: relative
+
+      &:before,
+      &:after
+        position: absolute
+        content: ''
+        width: rem(10)
+        height: rem(10)
+        border-radius: 100%
+        background-color: $accentcolor
+        top: rem(11)
+
+      &:before
+        left: 0
+
+      &:after
+        right: 0
+
+    &__title
+      font-size: rem(14)
+      font-weight: 500
+      margin-bottom: rem(5)
+
+    input
+      width: 100%
+      height: rem(3)
+      -webkit-appearance: none
+      appearance: none
+      background-color: rgba($accentcolor,.5)
+      border-radius: rem(3)
+      outline: none
+      margin: 0
+
+    span
+      position: absolute
+      font-size: rem(10)
+      opacity: .8
+      top: rem(30)
+
+  input[type="range"]::-webkit-slider-thumb
+    -webkit-appearance: none
+    appearance: none
+    height: rem(15)
+    width: rem(15)
+    background-color: $accentcolor
+    border-radius: 50%
+    cursor: pointer
+
+  input[type="range"]::-moz-range-thumb
+    -webkit-appearance: none
+    appearance: none
+    height: rem(15)
+    width: rem(15)
+    background-color: $accentcolor
+    border-radius: 50%
+    cursor: pointer
+
+

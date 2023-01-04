@@ -1,0 +1,273 @@
+.detail
+  padding: 0 0 rem(40)
+
+  &--without-banner
+    padding: rem(65) 0 rem(40)
+
+  &__banner
+    height: rem(190)
+    @include aic-jcc
+    border-radius: rem(2)
+    position: relative
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    &:before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba($black, .3)
+
+    &-title
+      font-size: rem(40)
+      text-align: center
+      color: $white
+      font-weight: 600
+      position: relative
+
+  &__info
+    display: flex
+    margin-top: rem(40)
+
+    @include sm
+      flex-direction: column
+
+    &-img
+      max-width: rem(400)
+      min-width: rem(400)
+      height: rem(400)
+      border-radius: rem(2)
+      overflow: hidden
+      position: relative
+      @include aic-jcc
+
+      @include md
+        max-width: rem(300)
+        min-width: rem(300)
+        height: rem(300)
+
+      @include sm
+        max-width: 100%
+        height: rem(154)  
+
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background-color: rgba($black, .3)
+
+      img
+        max-width: 100%
+        height: 100%
+        object-fit: cover
+        
+        @include sm
+          width: 100%
+
+    &-col
+      position: relative
+
+      &:first-child
+        margin-right: rem(30)
+        
+        @include lg
+          margin-right: rem(15)
+
+        @include sm
+          margin-right: 0
+          margin-bottom: rem(20)  
+
+        .detail__info-name
+          display: none
+          
+          @include sm
+            display: block
+
+    &-name
+      font-weight: 600
+      font-size: rem(22)
+      line-height: rem(26)
+      color: $secondarycolor
+      margin-bottom: rem(10)
+      padding-right: rem(150)
+      
+      @include sm
+        display: none
+
+    &-desc
+      font-size: rem(18)
+      line-height: normal
+
+    &-rating
+      @include aic-jfcfe
+      position: absolute
+      right: 0
+
+    &-star
+      width: rem(25)
+      height: rem(25)
+      @include aic-jcc
+      margin-right: rem(5)
+      &:last-child
+        margin-right: 0
+
+    ul
+      padding: 0
+      margin-top: rem(10)
+
+      li
+        list-style: none
+        @include aic
+        margin-bottom: rem(15)
+
+        .icon
+          min-width: rem(25)
+          max-width: rem(25)
+          height: rem(25)
+          border-radius: 100%
+          @include aic-jcc
+          background-color: $white
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.07)
+          margin-right: rem(10)
+
+        &.clock
+
+          .icon
+            svg
+              stroke: #62A111
+
+          span
+            margin: 0 rem(5)
+            font-weight: 900
+            color: $accentcolor
+
+        &.attention
+
+          .icon
+            svg
+              stroke: #DA7570
+
+          span
+            color: #DA7570
+
+        a
+          
+          transition: $transition
+
+          &:hover
+            color: $accentcolor
+
+      li,a
+        color: $secondarycolor
+        font-size: rem(18)
+
+  &__value
+    @include aic
+    margin-top: rem(15)
+    
+    @include md
+      flex-direction: column
+      align-items: flex-start
+
+    &-col
+      @include aic
+      margin-right: rem(30)
+      
+      @include lg
+        margin-right: rem(15)
+
+      &:last-child
+        margin-right: 0
+
+    .block__info-item
+      margin-right: rem(15)
+      padding: 0!important
+
+      &:last-child
+        margin-right: 0
+
+  &__price
+    &-item
+      margin-bottom: rem(16)
+      max-width: rem(220)
+      width: 100%
+      position: relative
+      color: $secondarycolor
+      
+      @include md
+        max-width: rem(150)
+
+      @media (max-width: 400px)  
+        max-width: 100%
+        
+
+      span
+        background: $white
+        box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.1)
+        border-radius: rem(2)
+        text-align: center
+        padding: rem(8)
+        position: relative
+        @include aic-jcc  
+        
+        @include md
+          font-size: rem(12)
+        
+        @media (max-width: 400px)
+          font-size: rem(20)    
+
+    &-percent
+      color: $white
+      font-size: rem(10)
+      font-weight: 600
+      border-radius: rem(11)
+      background: #DA7570
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      position: absolute
+      max-width: rem(36)
+      width: 100%
+      min-height: rem(22)
+      right: rem(-18)
+      bottom: rem(-12)
+      z-index: 1
+      
+      @media (max-width: 400px)
+        right: 0
+        bottom: auto
+        top: rem(-12)
+        background: $accentcolor
+
+    &-day
+      font-size: rem(14)
+      position: absolute
+      left: calc( 100% + 24px )
+      white-space: nowrap
+      top: 0
+      
+      @include md
+        font-size: rem(12)
+
+      @media (max-width: 400px)
+        position: relative
+        left: auto
+        top: auto
+        text-align: center
+        font-size: rem(14)
+        margin-bottom: rem(20)
+
+  &__btn
+    margin-top: rem(30)
+    @include aic
+    
+    .btn
+      max-width: rem(230)
+      width: 100%
+      margin-right: rem(13)
+
+      &:last-child
+        margin-right: 0

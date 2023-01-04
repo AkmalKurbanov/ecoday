@@ -1,7 +1,131 @@
 .footer
 	flex: 0 0 auto
+	background-color: $accentcolor
+	padding: rem(75) 0 rem(30)
+	
+	@include lg
+		padding: rem(50) 0 rem(30)
+
+	@include  xs
+		padding: rem(30) 0	
+
+	&__logo
+		width: rem(80)
+		height: rem(80)
+		margin-bottom: rem(10)
+		a
+			@include aic-jcc
+			height: 100%
+	p
+		font-size: rem(10)
+		color: $white
+		line-height: rem(14)
+
+	ul
+		padding: 0
+
+		@include  xs
+			display: none
+
+		li
+			list-style: none
+			
+			a
+				color: $white
+				transition: $transition
+				
+				@include md
+					font-size: rem(13)
+
+				@include  xs		
+					font-size: rem(16)
+
+				&:hover
+					color: $tertiary
+
+	&__title
+		color: $tertiary 		
+		font-weight: 700
+		position: relative
+
+		@include xs
+			cursor: pointer
+			display: inline-block		
+
+		svg
+			width: rem(15)
+			height: rem(15)
+			stroke: $tertiary	
+			top: 50%
+			transform: translateY(-50%)
+			margin-left: rem(5)
+			transition: $transition 
+			position: absolute
+			opacity: 0
+			
+			@include xs
+				opacity: 1
+		
+	&__wrap
+		@include aistr
+		
+		@include sm
+			flex-wrap: wrap
+			align-items: flex-start
+
+		@include  xs
+			flex-direction: column
+	
+	&__col
+		width: 25%
+
+		@include sm
+			width: 50%
+			margin-bottom: rem(20)
+
+		@include  xs
+			width: 100%	
+			text-align: center
+			margin-bottom: rem(5)
+
+		&:first-child
+			@include fdc
+			justify-content: center
+			
+			@include  xs
+				display: none
 
 
+	&__nav
+		&--contacts
+			margin-top: rem(10)
+			
+			ul
+				display: block
+		
+		&.active
+			svg
+				transform: translateY(-50%) rotate(180deg)
 
+		&.submenu-having
+			.footer__title
+				pointer-events: none
+
+				@include xs
+					pointer-events: inherit
+
+	
+	&__copyright
+		text-align: center
+		margin-top: rem(35)
+
+	.social
+		margin-top: rem(10)
+		@include xs
+			@include aic-jcc
+
+		ul
+			display: flex
+			
 
 	

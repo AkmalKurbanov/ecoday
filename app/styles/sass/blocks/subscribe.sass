@@ -1,0 +1,74 @@
+.subscribe
+  max-height: rem(250)
+  min-height: rem(250)
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  @include aic
+  padding: rem(30) 0
+
+  @media (min-width: 576px)
+    background-attachment: fixed
+    
+  
+
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+
+  &__wrap
+    @include aife-jfcsb
+
+    @include xs
+      flex-direction: column
+      padding: 0 rem(10)
+
+  &__col
+    width: calc( 50% - 25px )
+    &:first-child
+      @include xs
+        margin-bottom: rem(20)
+
+    @include sm
+      width: calc( 50% - 10px )
+
+    @include xs
+      width: 100%
+
+  .light-title
+    @include md
+      font-size: rem(28)
+      line-height: normal
+
+  &__form
+    @include aistr
+    padding-bottom: rem(5)
+    
+    @include md
+      flex-direction: column
+
+    
+    
+  &__input
+    border-bottom: rem(1) solid rgba($white, .3)
+    width: 100%
+    
+    @include md
+      margin-bottom: rem(20)
+    
+    input
+      height: 100%
+      width: 100%
+      background-color: transparent
+      outline: none
+      border: none
+      color: $white
+      padding-right: rem(15)
+
+      &::placeholder
+        color: $white
+  .btn
+    padding: rem(10) rem(40)

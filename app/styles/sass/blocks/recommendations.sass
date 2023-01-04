@@ -1,0 +1,50 @@
+.recommendations
+  margin-bottom: rem(20)
+  
+  &__wrap
+    white-space: nowrap
+    overflow-x: scroll
+    
+    &::-webkit-scrollbar
+      display: none
+
+  &__item
+    margin-right: rem(10)
+    max-width: rem(225)
+    min-width: rem(225)
+    border-radius: rem(5)
+    border: rem(1) solid #E4E4E4
+    padding: rem(15) rem(20) rem(20)
+    text-align: center
+    display: inline-block
+
+    &:last-child
+      margin-right: 0
+
+  &__img
+    height: rem(115)
+    width: rem(120)
+    @include aic-jcc
+    margin: auto
+    margin-bottom: rem(5)
+    img
+      height: 100%
+      max-width: 100%
+      object-fit: contain
+
+  &__name,
+  &__price
+    font-size: rem(14)
+    font-weight: 600
+    margin-bottom: rem(8)
+
+  &__name
+    color: $textcolor
+  
+  &__price
+    color: $accentcolor
+  
+  .btn
+    font-size: rem(12)
+    @include aic-jcc
+    margin-bottom: rem(10)

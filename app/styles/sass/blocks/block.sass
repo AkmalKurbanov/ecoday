@@ -1,0 +1,222 @@
+.block
+  border-radius: rem(5)
+  border: rem(1) solid #E4E4E4
+  height: calc( 100% - 2px )
+  padding: rem(20) rem(5)
+  display: inline-block
+  color: $textcolor
+  transition: $transition
+  min-width: rem(136)
+  max-width: rem(136)
+  min-height: rem(150)
+  margin-right: rem(20)
+  vertical-align: top
+  
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    @include hoverShadow
+    
+    .block__info
+      color: $accentcolor
+
+  &__icon
+    width: rem(60)
+    height: rem(60)
+    margin: auto
+
+  &__img
+    width: 100%
+    max-height: rem(90)
+    min-height: rem(65)
+    position: relative
+    @include aic-jcc
+    position: relative
+    border-radius: rem(2)
+    overflow: hidden
+
+    &:before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba($black, .5)
+
+    img
+      max-width: 100%
+      max-height: 100%
+      object-fit: cover
+      border-radius: rem(2)
+
+  &__logo
+    width: rem(90)
+    height: rem(60)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    @include aic-jcc
+
+  &__info
+    text-align: center
+    white-space: wrap
+    min-height: rem(40)
+    line-height: normal
+    min-height: rem(40)
+    margin-top: rem(10)
+    @include aic-jcc
+    color: $textcolor
+    transition: $transition    
+
+    &-counts
+      @include aic-jcc
+      flex-wrap: wrap
+      margin-top: rem(20)
+      
+      @include lg
+        margin-top: rem(10)
+
+      @include sm
+        flex-direction: column
+
+
+    &-item
+      color: $secondarycolor
+      @include aic
+      margin-bottom: rem(20)
+
+      @include lg
+        font-size: rem(14)
+        margin-bottom: rem(15)
+
+        @include sm
+          margin-bottom: rem(10)
+      
+      
+      &:first-child
+        padding-right: rem(20)
+        
+        @include lg
+          padding-right: rem(10)
+
+        @include sm
+          padding: 0    
+
+
+      span
+        font-weight: 700
+        margin-right: rem(5)
+
+    &-icon
+      width: rem(25)
+      height: rem(25)
+      background-color: $white
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.07)
+      border-radius: 100%
+      @include aic-jcc
+      margin-right: rem(10)
+      font-size: rem(18)
+      font-weight: 500
+      color: $accentcolor
+
+  &__btn
+    @include aistr-jfcsb
+
+    @include lg
+      flex-direction: column
+
+    .btn
+      margin-right: rem(10)
+      font-size: rem(15)
+      
+      @include lg
+        margin-right: 0
+
+      &:last-child
+        margin-right: 0
+
+        @include lg
+          margin-top: rem(10)
+
+    &--modify
+      .btn
+        width: 50%
+        
+        @include lg 
+          width: 100%
+           
+
+  &--image-large
+    padding: rem(20)
+    
+    @include lg
+      padding: rem(10)
+
+    .block__info
+      @include fdc
+      font-weight: 600
+      color: $accentcolor
+      font-size: rem(20)
+      
+      @include lg
+        font-size: rem(18)
+      
+      @include md
+        font-size: rem(16)
+
+      @include xs
+        font-size: rem(20)
+
+
+      span
+        font-size: rem(14)
+        color: $secondarycolor
+        margin: rem(5) 0
+        font-weight: 400
+
+  &--image-mini
+    padding: rem(6) rem(5) rem(20)
+    min-width: rem(160)
+    max-width: rem(160)
+
+    .block__info
+      @include fdc
+
+      span
+        font-size: rem(14)
+        color: $secondarycolor
+        margin-bottom: rem(5)
+
+
+
+.block-wrap
+  @include fww
+
+  @include md
+    justify-content: space-between
+
+  @include xs
+    flex-direction: column
+
+  
+  .block
+    max-width: calc( 33.33% - 15px )
+    margin-right: rem(22.5)
+    margin-bottom: rem(20)
+    
+    @include md
+      max-width: calc( 50% - 15px )
+      margin-right: 0
+
+    @include sm
+      max-width: calc( 50% - 5px)
+
+    @include xs
+      max-width: rem(340)
+      margin: auto!important
+      margin-bottom: rem(20)!important
+
+    &:nth-child(3n)
+      margin-right: 0

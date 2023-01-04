@@ -1,15 +1,12 @@
-extends layouts/main
+extends layouts/without-subscribe-form
 block title
-  | main
+  | Homepage
 block main
-  .wrapper
-    .content
-        include includes/header/header
-
-      
-    
-    include includes/footer/footer
-    include includes/icons/sprite
-
-
-  include includes/scripts 
+  .hero 
+    .container
+      .hero__wrap
+        include includes/mixins
+        +heroHome
+  include includes/nutrion-programms
+  include includes/delivery
+  include includes/markets

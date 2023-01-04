@@ -1,0 +1,24 @@
+.filter
+  .container
+    .filter__wrap.horizontal-scroll
+      a(href="#").filter__tab.active Все
+      each nutritionProgramm in nutritionProgramms
+        a(href="#").filter__tab=nutritionProgramm.title 
+          |  (
+          =nutritionProgramm.amount  
+          | )  
+    .filter__sorting
+      .filter__sort-btn
+        svg
+          use(xlink:href='sprite.svg#sort')    
+      .filter__range-wrap
+        .range.kcal-js
+          .range__title Содержание калорий:
+          .range__wrap
+            input(type='range' max='2000' min='0')
+            span
+        .range.price-js
+          .range__title Цена:
+          .range__wrap
+            input(type='range' max='2000' min='0')
+            span

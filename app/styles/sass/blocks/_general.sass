@@ -1,34 +1,226 @@
 *
-  margin: 0 
+  margin: 0
+  box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
 
 html,
 body
   height: 100%
-  position: relative      
+  position: relative
 
-.wrapper 
+p 
+  font-size: rem(22)
+  line-height: rem(26.82)
+ 
+  @include lg
+    font-size: rem(20)
+    line-height: rem(24)
+
+  @include md
+    font-size: rem(17)
+    line-height: normal
+
+  @include sm
+    font-size: rem(16)
+  
+  @include xs
+    font-size: rem(14)
+
+
+.wrapper
   display: flex
   flex-direction: column
   min-height: 100%
 
-  .content 
+  .content
     flex: 1 0 auto
+    padding-top: rem(80)
+    
+    @include md
+      padding-top: rem(60)
+
+a
+  text-decoration: none
+
+.container
+  width: 100%
+  padding-right: rem(15px)
+  padding-left: rem(15px)
+  margin-right: auto
+  margin-left: auto
+  max-width: rem(1190px)
+  position: relative
+  box-sizing: border-box
+  @include lg
+    max-width: rem(960px)
+  @include md
+    max-width: rem(720px)
+  @include sm
+    max-width: rem(540px)
+  @include xs
+    max-width: 100%
+
+// btn
+.btn
+  @include aic-jcc
+  display: inline-flex
+  outline: none
+  color: $white
+  background-color: $accentcolor
+  padding: rem(10) rem(15)
+  border-radius: rem(5)
+  transition: $transition
+  
+  border: rem(1) solid $accentcolor
+  cursor: pointer
+
+  &:hover
+    @include hoverShadow
+
+  &__icon
+    width: rem(20)
+    height: rem(20)
+    border-radius: 100%
+    @include aic-jcc
+    margin-right: rem(6)
+
+    img
+      width: 100%
+    
+
+  &--transparent
+    background-color: transparent
+    color: $accentcolor
+
+  &--light
+    background-color: $white
+    color: $textcolor  
+    
+    &:hover
+      background-color: $accentcolor
+      color: $white
   
 
-.container 
-  width: 100% 
-  padding-right: rem(15px) 
-  padding-left: rem(15px) 
-  margin-right: auto 
-  margin-left: auto 
-  max-width: rem(1170px) 
-  position: relative 
-  box-sizing: border-box 
-  @include lg
-    max-width: rem(960px) 
+
+// btn end
+
+  // title
+.accent-title
+  font-size: rem(50)
+  color: $accentcolor
+  font-weight: 700
+  line-height: rem(60)
+  margin-bottom: rem(10)
+  
+  @include lg 
+    font-size: rem(40)
+    line-height: rem(50)
+
   @include md 
-      max-width: rem(720px) 
-  @include sm 
-      max-width: rem(540px) 
-  @include xs 
-      max-width: 100% 
+    font-size: rem(30)
+    line-height: rem(35)
+
+  @include sm
+    font-size: rem(20)
+    line-height: rem(30)
+
+.title
+  font-size: rem(28)
+  font-weight: 600
+  margin-bottom: rem(18)
+  
+  @include lg
+    font-size: rem(25)
+    margin-bottom: rem(16)
+
+  @include md
+    font-size: rem(23)
+    margin-bottom: rem(15)
+
+  @include sm
+    font-size: rem(20)
+    margin-bottom: rem(14)
+
+  @include xs
+    font-size: rem(18)
+    margin-bottom: rem(12)
+
+.subtitle 
+  font-size: rem(22)
+  font-weight: 400
+  
+  @include lg 
+    font-size: rem(20)
+
+  @include md 
+    font-size: rem(16)
+
+  @include sm
+    font-size: rem(14)
+
+  // title end
+
+.light-title
+  color: $white
+  font-weight: 700
+  font-size: rem(40)
+  line-height: rem(48)
+
+// social
+.social
+  ul
+    @include aic
+
+    li
+      margin-right: rem(14)
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        a
+          @include hoverShadow
+
+      a
+        width: rem(30)
+        height: rem(30)
+        border-radius: 100%
+        @include aic-jcc
+        background-color: $white
+        transition: $transition
+
+// social end
+
+
+.patr
+  margin: rem(15) 0
+  position: relative
+
+.horizontal-scroll
+  overflow-x: auto
+  white-space: nowrap
+
+  
+
+  .mCSB_container,
+  .mCS_x_hidden.mCS_no_scrollbar_x
+    padding: rem(10) 0
+    margin-bottom: 0!important
+
+  *
+    white-space: normal
+  
+  &::-webkit-scrollbar
+    display: none
+
+
+
+.more
+  position: absolute
+  top: 0
+  right: rem(15)
+  color: $accentcolor
+  display: none
+  
+  @include xs
+    display: block

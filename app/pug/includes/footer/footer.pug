@@ -1,3 +1,58 @@
-footer 2
-  img(src="", alt="")        
-
+footer.footer
+  .container 
+    .footer__wrap 
+      .footer__col
+        .footer__logo 
+          a(href="#")
+            svg
+              use(xlink:href='sprite.svg#logoFooter')
+        p Privacy Policy <br>
+          |Terms and Conditions  
+      .footer__col
+        .footer__nav.submenu-having
+          .footer__title=footerMenuDEliveryTitle
+            svg
+              use(xlink:href='sprite.svg#angle')
+          ul
+            each item in footerMenuDElivery
+              li
+                a(href=item.link)=item.item 
+      
+      .footer__col
+        .footer__nav.submenu-having
+          .footer__title=footerMenuEcoProductsTitle
+            svg
+              use(xlink:href='sprite.svg#angle')
+          ul
+            each item in footerMenuEcoProducts
+              li
+                a(href=item.link)=item.item 
+      
+      .footer__col
+        .footer__nav.submenu-having
+          .footer__title=footerMenuSpecialistsTitle
+            svg
+              use(xlink:href='sprite.svg#angle')
+          ul
+            each item in footerMenuSpecialists
+              li
+                a(href=item.link)=item.item 
+        
+        .footer__nav.footer__nav--contacts
+          .footer__title=contactsTitle
+          ul
+            each item in contacts
+              li
+                a(href=item.link)=item.item 
+        
+          .social 
+            ul 
+              each item in social
+                li 
+                  a(href=item.link)
+                    svg
+                      use(xlink:href='sprite.svg#'+item.icon)  
+    
+    .footer__copyright 
+      p Copyright  ©EcoDay 2022 <br>
+        |All Rights Reserved                 

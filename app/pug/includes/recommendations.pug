@@ -1,0 +1,17 @@
+.recommendations.patr
+  .container
+    h2.title Рекомендуем
+    .recommendations__wrap.horizontal-scroll 
+      each recommendation in recommendations
+        .recommendations__item 
+          .recommendations__img
+            img(src="images/dist/"+recommendation.img , alt="" width="120" height="115") 
+          .recommendations__name=recommendation.name
+          .recommendations__price=recommendation.price
+            | сом
+          a.btn.btn--transparent(href="#")
+            .btn__icon
+              svg
+                use(xlink:href='sprite.svg#ecolifemini') 
+            | Eco Life  
+          a.btn(href="#") Заказать

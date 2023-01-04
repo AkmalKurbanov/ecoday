@@ -1,1 +1,37 @@
-header 1
+header.header
+  .container 
+    .header__wrap
+      .header__back-btn
+        a(href="#") 
+          svg
+            use(xlink:href='sprite.svg#arrow')
+      .header__logo
+          a(href="#")
+            svg
+              use(xlink:href='sprite.svg#logoHeader')
+      .header__hamburger
+        svg
+          use(xlink:href='sprite.svg#hamburger')       
+      .header__nav 
+        mixin list(data)
+          ul
+            each item, index in  data.items
+              if index == 0
+                li.active
+                  a(href="#")=item.title
+                  if item.sublevel 
+                    svg
+                      use(xlink:href='sprite.svg#angle')
+                    +list(item)
+              else
+                li
+                  a(href="#")=item.title
+                  if item.sublevel 
+                    svg
+                      use(xlink:href='sprite.svg#angle')
+                    +list(item)
+
+
+        - var data = {"items":[{"title":"Главная"},{"title":"Доставка еды","sublevel":true,"items":[{"title":"Six Box"},{"title":"Eat Fit Healthy"},{"title":"Food Project"},{"title":"Malina Eco Food"},{"title":"Grow Food"},{"title":"Healthy Food"}]},{"title":"Программы питания","sublevel":true,"items":[{"title":"Детокс"},{"title":"Набор массы"},{"title":"Поддержка веса"},{"title":"Комфорт"},{"title":"Фитнес"},{"title":"Диабетическое"},{"title":"Спорт"}]},{"title":"Эко продукты","sublevel":true,"items":[{"title":"Ecoferma Market"},{"title":"Green Market"},{"title":"Eco Life"},{"title":"Green Valley"},{"title":"Ынтымык Market"},{"title":"Green Market"}]},{"title":"Контакты"}]}
+        +list(data)
+  
